@@ -1,0 +1,12 @@
+{
+  "options": {
+    "paths": {
+      "fonts": "fonts"
+    }
+  },
+  "styles": {
+    "light": {
+      "style": "light-style.json"
+    }
+  }
+}
