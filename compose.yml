@@ -1,0 +1,21 @@
+name: maplibre-nautical
+
+services:
+  convert_maps:
+    image: maplibre-nautical
+    build:
+      context: .
+      args:
+        BUILD_TYPE: Release
+    volumes:
+      - ./:/project
+    command: /project/scripts/convert_maps.sh
+  generate_mapstyle:
+    image: maplibre-nautical
+    build:
+      context: .
+      args:
+        BUILD_TYPE: Release
+    volumes:
+      - ./:/project
+    command: /project/scripts/generate_mapstyle.py
