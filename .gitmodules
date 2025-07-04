@@ -1,0 +1,3 @@
+[submodule "enc-mapbox-converter"]
+	path = enc-mapbox-converter
+	url = https://github.com/Greenroom-Robotics/enc-mapbox-converter.git
