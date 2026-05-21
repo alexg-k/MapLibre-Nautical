@@ -1,5 +1,7 @@
 # MapLibre-Nautical
 
+![Sample image](./example_tileserver_light.png)
+
 Convert s57 ENC charts to vector tiles and render them in [MapLibre](https://maplibre.org/) / [Mapbox](https://www.mapbox.com/). MapLibre can be included in various frontends like [Qt](https://github.com/maplibre/maplibre-native-qt), GLFW, iOS, Android, MacOS, Windows and [more](https://github.com/maplibre/awesome-maplibre).
 
 | :exclamation:  The state of the style is early work in progress! |
@@ -7,13 +9,14 @@ Convert s57 ENC charts to vector tiles and render them in [MapLibre](https://map
 
 ## Worfklow
 
-I am taking [this](https://github.com/Greenroom-Robotics/enc-mapbox-converter) excellent repo to convert to mbtiles and then generate the respective style to render all the information aproppriately. The respective result can be view with [tilserver-gl](https://github.com/maptiler/tileserver-gl) and the style can be improved using [Maputnik](https://maputnik.github.io/), see the following [section](#result).
+I am taking [this](https://github.com/Greenroom-Robotics/enc-mapbox-converter) excellent repo to convert to mbtiles and then generate the respective style to render all the information aproppriately. Some assets like fonts and icons come from [here](https://github.com/manimaul/s57tiler.git). The respective result can be view with [tilserver-gl](https://github.com/maptiler/tileserver-gl) and the style can be improved using [Maputnik](https://maputnik.github.io/), see the following [section](#result).
 
 
 1. `git clone this repo`
 2. `git submodule update --init`
 3. `docker compose build`
 4. `docker compose run --rm convert_maps`
+4. `docker compose run --rm fetch_assets`
 5. `docker compose run --rm generate_mapstyle`
 
 
