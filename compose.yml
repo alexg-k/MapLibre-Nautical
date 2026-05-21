@@ -10,6 +10,15 @@ services:
     volumes:
       - ./:/project
     command: /project/scripts/convert_maps.sh
+  fetch_assets:
+    image: maplibre-nautical
+    build:
+      context: .
+      args:
+        BUILD_TYPE: Release
+    volumes:
+      - ./:/project
+    command: /project/scripts/fetch_assets.sh
   generate_mapstyle:
     image: maplibre-nautical
     build:
