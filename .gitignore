@@ -1,2 +1,5 @@
 output/
-output_geojson/
+output_*/
+assets/
+__pycache__/
+*.pyc
